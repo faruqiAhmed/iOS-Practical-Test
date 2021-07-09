@@ -16,7 +16,7 @@ struct ContentView: View {
             VStack{
                 SearchBar(searchTerm: $viewModel.searchTerm )
                 if viewModel.resultls.isEmpty{
-                   // EmptyStateView()
+                    EmptyStateView()
                 } else{
                     List(viewModel.resultls) { quran in
                          QuranView(quran: quran)
@@ -67,22 +67,22 @@ struct QuratView: View {
     }
 }
 }
-//struct EmptyStateView: View {
-//  var body: some View {
-//    VStack {
-//      Spacer()
-//
-//     //Image(systemName: "music.note")
-//        .font(.system(size: 85))
-//        .padding(.bottom)
-//      Text("Start searching quran Verses ")
-//        .font(.title)
-//      Spacer()
-//    }
-//    .padding()
-//    .foregroundColor(Color(.systemIndigo))
-//  }
-//}
+struct EmptyStateView: View {
+ var body: some View {
+   VStack {
+     Spacer()
+
+   
+       .font(.system(size: 85))
+       .padding(.bottom)
+     Text("Start searching quran Verses ")
+       .font(.title)
+     Spacer()
+   }
+   .padding()
+   .foregroundColor(Color(.systemIndigo))
+ }
+}
 
 struct SearchBar: UIViewRepresentable  {
     typealias UIView = UISearchBar
