@@ -75,7 +75,7 @@ struct EmptyStateView: View {
    
        .font(.system(size: 85))
        .padding(.bottom)
-     Text("Start searching quran Verses ")
+     Text(" Quran Verses Don't Match ")
        .font(.title)
      Spacer()
    }
